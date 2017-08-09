@@ -1,4 +1,21 @@
-<h1>
-  {{title}}
-</h1>
+<nav *ngIf="showMenu" class="navbar navbar-default">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <a class="navbar-brand" routerLink="">Vem Doutor</a>
+    </div>
+
+    <ul class="nav navbar-nav">
+        <li routerLinkActive="active">
+          <a routerLink="/login">log1</a>
+        </li>
+        <li routerLinkActive="active">
+          <a routerLink="">Home</a>
+        </li>
+    </ul>
+  </div>
+</nav>
+
+<div class="container">
 <router-outlet></router-outlet>
+</div>
