@@ -16,7 +16,12 @@ export class LoginComponent implements OnInit {
   }
 
   todoLogin(){
+
     console.log("passou aki")
     this.authService.logar(this.user);
+  }
+
+  logout(){
+    
   }
 }

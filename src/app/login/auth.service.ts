@@ -26,4 +26,8 @@ export class AuthService {
     return this.autenticado;
   }
 
+  logout(){
+    this.autenticado = false;
+  }
+
 }
