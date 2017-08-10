@@ -3,11 +3,11 @@ import { Http } from '@angular/http';
 import {FormGroup,FormBuilder} from '@angular/forms';
 
 @Component({
-  selector: 'app-pre-register-form',
-  templateUrl: './pre-register-form.component.html',
-  styleUrls: ['./pre-register-form.component.css']
+  selector: 'app-client',
+  templateUrl: './client.component.html',
+  styleUrls: ['./client.component.css']
 })
-export class PreRegisterFormComponent implements OnInit {
+export class ClientComponent implements OnInit {
 
   formulario: FormGroup;
   constructor(private formBuilder:FormBuilder,private http:Http) { }

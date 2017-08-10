@@ -1,8 +1,9 @@
+
 import { NgModule } from '@angular/core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
-import { PreRegisterFormComponent } from './pre-register-form.component';
 import { FormsModule , ReactiveFormsModule } from '@angular/forms';
+import { ClientComponent } from './client.component';
 
 @NgModule({
   imports: [
@@ -10,6 +11,6 @@ import { FormsModule , ReactiveFormsModule } from '@angular/forms';
     ReactiveFormsModule,
     HttpModule
   ],
-  declarations: [PreRegisterFormComponent]
+  declarations: [ClientComponent]
 })
-export class PreRegisterFormModule { }
+export class ClientModule { }
