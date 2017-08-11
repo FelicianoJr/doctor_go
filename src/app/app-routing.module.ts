@@ -4,20 +4,23 @@ import { LoginComponent} from './login/login.component';
 import { GuardService } from './guards/guard.service';
 import { HomeComponent} from './home/home.component';
 import { ClientComponent } from './client/client.component';
+import { ModuleWithProviders } from '@angular/core';
 
+const appRoutes: Routes = [
+  {path:'admin',
+    loadChildren:'app/admin/admin.module#AdminModule',
 
-const routes: Routes = [
+  },
   { path: 'login',component:LoginComponent},
   { path: 'home', component: HomeComponent,
   canActivate: [GuardService],
   canLoad: [GuardService]
 },
-{ path: 'client',component:ClientComponent},
 { path: '', redirectTo: '/login', pathMatch: 'full' }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(appRoutes,{useHash: true})],
   exports: [RouterModule],
   providers: []
 })

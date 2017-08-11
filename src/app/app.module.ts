@@ -2,22 +2,20 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule ,ReactiveFormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
-import { AppRoutingModule } from './app-routing.module';
-import { AppComponent } from './app.component';
 
-import { LoginComponent } from './login/login.component';
+import { AppRoutingModule } from './app-routing.module';
 import { AuthService } from './login/auth.service';
 import { GuardService } from './guards/guard.service';
+import { AppComponent } from './app.component';
+import { LoginComponent } from './login/login.component';
 import { HomeComponent } from './home/home.component';
-import { ClientModule} from './client/client.module';
-import { AdminComponent } from './admin/admin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     HomeComponent,
-    AdminComponent,
+
   ],
   imports: [
     BrowserModule,
@@ -25,7 +23,6 @@ import { AdminComponent } from './admin/admin.component';
     ReactiveFormsModule,
     HttpModule,
     AppRoutingModule,
-    ClientModule
   ],
   providers: [ AuthService, GuardService ],
   bootstrap: [AppComponent]
